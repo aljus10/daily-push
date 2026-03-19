@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Push</title>
+  <meta name="description" content="A no-scroll, time-aware, mood-based reflection website." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="grain"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">Daily Push</div>
+      <div class="meta" id="metaLine">Loading your moment...</div>
+    </header>
+
+    <section class="panel intro-panel" id="introPanel">
+      <p class="eyebrow" id="timeLabel">Afternoon mode</p>
+      <h1 id="mainTitle">The middle of the day is where weak stories grow.</h1>
+      <p class="subcopy" id="mainSubcopy">Be honest. What is happening to you right now?</p>
+
+      <div class="mood-wrap">
+        <p class="prompt" id="promptLine">Choose what feels closest.</p>
+        <div class="mood-buttons" id="moodButtons"></div>
+      </div>
+
+      <div class="bottom-row">
+        <button class="secondary-btn" id="changeModeBtn" type="button">Try another time</button>
+      </div>
+    </section>
+
+    <section class="panel result-panel hidden" id="resultPanel">
+      <div class="result-top">
+        <p class="eyebrow" id="selectedMood">You chose: Unmotivated</p>
+        <button class="ghost-btn" id="backBtn" type="button">Back</button>
+      </div>
+
+      <blockquote class="quote-card">
+        <p class="quote-mark">“</p>
+        <p class="quote-text" id="quoteText">Loading quote...</p>
+        <footer class="quote-author" id="quoteAuthor">— Daily Push</footer>
+      </blockquote>
+
+      <div class="reflection-card">
+        <p class="card-label">Reflection</p>
+        <p class="reflection-text" id="reflectionText">Loading reflection...</p>
+      </div>
+
+      <div class="action-card">
+        <p class="card-label">Do this now</p>
+        <p class="action-text" id="actionText">Loading action...</p>
+        <button class="primary-btn" id="anotherBtn" type="button">Show another thought</button>
+      </div>
+    </section>
+
+    <section class="panel perspective-panel hidden" id="perspectivePanel">
+      <p class="card-label">Need perspective?</p>
+      <p class="perspective-text" id="perspectiveText">You are still here. That matters more than your mood is admitting.</p>
+      <button class="ghost-btn" id="perspectiveBtn" type="button">Give me perspective</button>
+    </section>
+  </main>
+
+  <div class="mode-switcher hidden" id="modeSwitcher">
+    <div class="switcher-card panel">
+      <p class="eyebrow">Preview another time of day</p>
+      <div class="switch-grid">
+        <button class="switch-btn" data-mode="morning" type="button">Morning</button>
+        <button class="switch-btn" data-mode="afternoon" type="button">Afternoon</button>
+        <button class="switch-btn" data-mode="evening" type="button">Evening</button>
+        <button class="switch-btn" data-mode="night" type="button">Night</button>
+      </div>
+      <button class="ghost-btn close-switcher" id="closeSwitcherBtn" type="button">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
