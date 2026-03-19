@@ -57,12 +57,20 @@ body {
   position: relative;
   z-index: 1;
   width: min(1120px, calc(100% - 28px));
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: 22px 0 28px;
+  padding: 18px 0 20px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 18px;
+  gap: 14px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .topbar {
@@ -108,7 +116,7 @@ body {
   background: var(--panel);
   box-shadow: var(--shadow);
   border-radius: 34px;
-  padding: clamp(20px, 3vw, 34px);
+  padding: clamp(18px, 2.4vw, 30px);
 }
 
 .intro-panel,
@@ -117,6 +125,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 0;
+  overflow: auto;
 }
 
 .eyebrow {
@@ -133,9 +142,9 @@ body {
 
 h1 {
   margin: 0;
-  max-width: 15ch;
-  font-size: clamp(2.8rem, 7vw, 6rem);
-  line-height: 0.93;
+  max-width: 13ch;
+  font-size: clamp(2.2rem, 5.4vw, 5.2rem);
+  line-height: 0.94;
   letter-spacing: -0.06em;
 }
 
@@ -348,5 +357,50 @@ button:hover {
 
   .switch-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 900px) {
+  .app {
+    padding: 14px 0 16px;
+    gap: 12px;
+  }
+
+  .panel {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4.8vw, 4.4rem);
+    max-width: 12ch;
+  }
+
+  .subcopy {
+    margin-top: 12px;
+    line-height: 1.55;
+  }
+
+  .mood-wrap {
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 760px) {
+  html, body {
+    overflow: auto;
+  }
+
+  .app {
+    min-height: auto;
+  }
+
+  .intro-panel,
+  .result-panel {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4.2vw, 3.6rem);
+    max-width: none;
   }
 }
