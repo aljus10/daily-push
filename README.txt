@@ -43,3 +43,12 @@ The goal is not hype, but clarity, internalization, and self-reflection.
 - Vercel for deployment
 
 ---
+
+## Project Structure
+
+```bash
+daily-push/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
